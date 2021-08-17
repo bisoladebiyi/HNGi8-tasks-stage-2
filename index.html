@@ -21,13 +21,17 @@
             background: #fff;
             padding: 30px 0;
         }
+        input{
+            width: 50%;
+            height: 20px;
+        }
         p {
             color: #F4ABC4;
         }
         button {
             border: 1px solid #F4ABC4;
             background: transparent;
-            padding: 10px;
+            padding: 8px;
             cursor: pointer;
             transition: background ease-in-out .2s;
         }
@@ -38,6 +42,10 @@
             div {
                 width: 85%;
             }
+            input {
+                width: 70%;
+                height: 15px;
+            }
             
         }
 
@@ -47,8 +55,11 @@
     <div>
         <h2>Name Printing App</h2>
         <h5>Click The Button To Print Name</h5>
-        <p class="name"></p>
-        <button onclick="showName()">Click</button>
+    
+            <input class="input" type="text" placeholder="Enter Name">
+            <p class="name"></p>
+            <button onclick="showName()">Click Here</button>
+      
         
     </div>
    
@@ -56,9 +67,13 @@
 
 <script type="text/javascript">
    let name = document.querySelector(".name")
+   let input = document.querySelector(".input")
 
    const showName = () => {
-       name.innerText = "Adebiyi Abisola"
+       name.innerText = input.value;
+       if(input.value == "") {
+           alert("Please enter name")
+       }
    }
 
 </script>
