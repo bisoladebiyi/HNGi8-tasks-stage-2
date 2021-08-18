@@ -51,10 +51,6 @@ const Skills = () => {
                     <img className="arrow" src={arrow} alt=""/>
                     <p>Good Communication (Verbal and Written)</p>
                     </div>
-                   <div className="skill">
-                   <img className="arrow" src={arrow} alt=""/>
-                   <p>jQuery</p>
-                   </div>
                     <div className="skill">
                     <img className="arrow" src={arrow} alt=""/>
                     <p>Good Listener</p>
