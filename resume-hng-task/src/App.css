@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,400&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body {
+  position: relative;
+  background: #ffff;
+  font-family: Roboto;
+}
+
+/* navbar */
+.navbar {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 200;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 5px 15px #eeeded;
+}
+.nav-items {
+  display: flex;
+  font-size: 15px;
+}
+.navbar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.nav-items li {
+  position: relative;
+}
+.nav-items li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background: #FF6B6B;
+  left: 0;
+  bottom: -3px;
+  border-radius: 3px;
+  transition: width ease-in-out .2s;
+}
+.nav-items li:hover::after{
+  width: 100%;
+}
+.nav-items li:not(:first-child) {
+ margin-left: 20px;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+
+
+
+/* heading */
+.heading {
+  margin-top: 20%;
+  padding: 0 30px;
+}
+.name {
+  font-size: 60px;
+}
+
+
+
+
+
+/* experience */
+.experiences {
+ width: 90%;
+ margin: 140px auto 0;
+ padding-top: 80px;
+}
+.section-heading {
+  text-transform: uppercase;
+  font-size: 26px;
+  position: relative;
+}
+.section-heading::after {
+position: absolute;
+content: "";
+height: 1px;
+width: 400px;
+background: #FF6B6B;
+top: 50%;
+left: 200px;
+opacity: .2;
+}
+.experience-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 40px;
+  margin-top: 30px;
+}
+.experience {
+  width: 80%;
+}
+.place {
+  font-size: 18px;
+  color: #444444;
+}
+.date {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #fd9090;
+  font-style: italic;
+}
+.desc {
+  margin-top: 10px;
+  color: #444444;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+
+.mobile-menu{
+  width: 70%;
+  height: 100vh;
+  background: #fd9090;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: -3000px;
+  transition: right ease-in-out .5s;
+  font-size: 13px;
+  box-shadow: 20px 5px 50px #cecece;
+}
+.mobile-menu-items {
+  margin-top: 70px;
+  padding: 30px 0 0 0;
+  
+  
+}
+.mobile-menu-items a{
+  color: #fff;
+  display: block;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: right ease-in-out .5s;
+  
+}
+.close {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: none;
+  border: none;
+  outline: none;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+}
+
+
+
+/* skills */
+.skills {
+  width: 70%;
+  margin: 120px auto 0;
+  padding-top: 80px;
+}
+.skill-pseudo::after {
+ left: 120px;
+ width: 400px;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 15px;
+  color: #444444;
+}
+.arrow {
+  width: 20px;
+}
+.tech-soft-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: 50px auto;
+}
+
+
+
+
+
+
+
+
+/* education */
+.education {
+  width: 90%;
+  margin: 100px auto 150px;
+  padding-top: 80px;
+}
+.education-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
+  margin-top: 30px;
+}
+.footer {
+  width: 100%;
+  height: 300px;
+  background: #fd9090;
+  text-align: center;
+  color: #ffff;
+  font-weight: 400;
+}
+.footer-content {
+  margin-top: 40px;
+}
+.icons {
+  margin-top: 32px;
+}
+.icon {
+  width: 22px;
+}
+.icons a:not(:last-child) {
+  margin-right: 13px;
+}
+.zuriteam-link {
+  margin-top: 30px;
+
+}
+.zuriteam-link a {
+ text-decoration: underline;
+ font-size: 14px;
+}
+
+
+
+
+
+/* responsiveness */
+@media(max-width:900px) and (min-width: 700px) {
+  .nav-items {
+    font-size: 13px
+  }
+  .logo {
+    width: 140px;
+  }
+  .heading {
+    margin-top: 40%;
+
+  }
+  .name {
+    font-size: 55px;
+  }
+  .section-heading {
+    font-size: 23px;
+  }
+  .section-heading::after {
+    width: 350px;
+    left: 180px;
+  }
+  .place {
+    font-size: 16px;
+   
+  }
+  .date {
+    font-size: 10px;
+
+  }
+  .desc {
+   font-size: 13px;
+  }
+
+  .skill {
+    font-size: 13px ;
+  }
+  .skill-pseudo::after {
+    left: 100px;
+    width: 400px;
+   }
+
+  .tech-soft-skills h4 {
+    font-size: 15px;
+  }
+  .footer {
+font-size: 14px;
+  }
+  .icon {
+    width: 20px;
+  }
+  .zuriteam-link a {
+    font-size: 12px;
+   }
+  
+}
+
+@media(max-width:699px) and (min-width: 500px) {
+  .nav-items {
+    font-size: 12px
+  }
+  .logo {
+    width: 130px;
+  }
+  .nav-items li:not(:first-child) {
+    margin-left: 15px;
+   }
+  .heading {
+    margin-top: 50%;
+
+  }
+  .name {
+    font-size: 45px;
+  }
+  .section-heading {
+    font-size: 20px;
+  }
+  .section-heading::after {
+    width: 250px;
+    left: 150px;
+  }
+
+  .place {
+    font-size: 14px;
+   
+  }
+  .date {
+    font-size: 10px;
+
+  }
+  .desc {
+   font-size: 12px;
+  }
+  .skills {
+    margin-top: 80px;
+  }
+  .skill {
+    font-size: 12px ;
+  }
+  .skill-pseudo::after {
+    left: 85px;
+    width: 250px;
+   }
+   .tech-soft-skills {
+   
+    width: 85%;
+  
+  }
+  .education {
+
+    margin: 60px auto 150px;
+ 
+  }
+  
+  .tech-soft-skills h4 {
+    font-size: 14px;
+  }
+  .footer {
+font-size: 14px;
+  }
+  .icon {
+    width: 18px;
+  }
+  .zuriteam-link a {
+    font-size: 12px;
+   }
+  
+}
+
+
+@media(max-width:499px) and (min-width: 0px){
+  .nav {
+    padding: 15px 20px;
+  }
+  .nav-items{
+    display: none;
+  }
+  .navbar button {
+    display: block;
+  }
+  .menu {
+  
+    width: 18px;
+  }
+  .experience-container{
+    display: block;
+ 
+  }
+  .experience {
+    margin: 0 auto;
+   margin-bottom: 50px;
+  }
+}
+
+@media(max-width:499px) and (min-width: 270px) {
+
+  .logo {
+    width: 120px;
+  }
+  .heading {
+    margin-top: 80%;
+    padding: 0 20px;
+
+  }
+  .name {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .section-heading {
+    font-size: 15px;
+  }
+  .section-heading::after {
+    width: 150px;
+    left: 110px;
+  }
+
+  .place {
+    font-size: 14px;
+   
+  }
+  .date {
+    font-size: 10px;
+
+  }
+  .desc {
+   font-size: 12px;
+  }
+  .skills {
+    margin-top: 60px;
+    width: 90%;
+  }
+  .skill {
+    font-size: 12px ;
+  }
+  .skill-pseudo::after {
+    left: 70px;
+    width: 150px;
+   }
+   .tech-soft-skills {
+   margin-top: 30px;
+    width: 100%;
+  
+  }
+  .tech-soft-skills h4 {
+    font-size: 13px;
+  }
+  .education {
+   margin: 60px auto 150px;
+  }
+  .education-container {
+    margin-top: 20px;
+    display: block;
+  }
+  .education-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+
+  .footer {
+font-size: 12px;
+  }
+  .icon {
+    width: 17px;
+  }
+  .zuriteam-link a {
+    font-size: 11px;
+   }
+  
+}
